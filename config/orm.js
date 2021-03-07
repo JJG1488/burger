@@ -4,7 +4,7 @@
 // * `insertOne()`
 // * `updateOne()`
 
-const connection = require('./connection');
+const connection = require('./connections');
 
 // Helper function for SQL syntax to add question marks (?, ?, ?) in query
 const printQuestionMarks = (num) => {
