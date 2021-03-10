@@ -1,7 +1,7 @@
-<img src="/assets/css/img/burger-photo-main.jpg" alt="main-burger-photo" id="burger-photo-main">
-<h1>Wanna Burger?</h1>
-
-
+<div class="background-white">
+    <img src="/assets/css/img/burger-photo-main.jpg" alt="main-burger-photo" id="burger-photo-main">
+    <h1>Wanna Burger?</h1>
+</div>
 
 
 {{!-- ======================================================= --}}
@@ -10,7 +10,7 @@
 
 
 <div class="not-eaten-burgers">
-    <div class="test">
+    <div class="column-top">
         <hr>
         <h2>Burgers not eaten!</h2>
         <hr>
@@ -27,14 +27,12 @@
 </div>
 
 
-
-
 {{!-- ======================================================= --}}
 {{!-- =================================== Eaten burger section --}}
 {{!-- ======================================================= --}}
 
 <div class="eaten-burgers">
-    <div class="test">
+    <div class="column-top">
         <hr>
         <h2>Burgers eaten!</h2>
         <hr>
@@ -57,7 +55,7 @@
 
 <div class="addABurger">
     <h3>Add a Burger</h3>
-
+    <hr>
     <form id="create-form">
 
         <div class="form-group">
@@ -69,6 +67,7 @@
             <label for="devoured">Choose a side</label><br>
             <input type="radio" name="devoured" value="1" id="devoured" checked> Eaten<br>
             <input type="radio" name="devoured" value="0" id="notDevoured"> Not Eaten
+
             <div><button type="submit">Add Burger</button></div>
 
         </div>

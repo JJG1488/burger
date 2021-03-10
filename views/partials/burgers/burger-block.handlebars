@@ -1,10 +1,14 @@
 <li>
 	{{burger_name}}
 	<hr>
-
-	<button class="change-devour" data-id="{{id}}" data-newDevour="{{devour}}">
-		{{#if devour}}EAT{{else}}PASS{{/if}}
-	</button>
-
-	<button class="delete-burger" data-id="{{this.id}}">DELETE</button>
+	<div class="green">
+		<button class="change-devour" data-id="{{id}}" data-newDevour="{{devour}}">
+			{{#if devour}}EAT{{else}}PASS{{/if}}
+		</button>
+	</div>
+	<hr>
+	<div class="brown">
+		<button class="delete-burger" data-id="{{this.id}}">DELETE</button>
+	</div>
+	<hr>
 </li>
