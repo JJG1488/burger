@@ -1,20 +1,64 @@
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: red;
+  max-width: 40%;
+}
+
+.test {
+  background-color: red;
+}
+
+.not-eaten-burgers {
+  border-radius: 2%;
+  border-style: dashed;
+  float: right;
+  max-width: 30%;
+}
+
+.eaten-burgers {
+  border-radius: 2%;
+  border-style: dashed;
+  float: left;
+  max-width: 30%;
+}
+
 li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-  }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-  
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+  max-width: 70%;
+  background: orange;
+  border-radius: 18%;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+.addABurger {
+  text-align: center;
+}
+
+#burger-photo-main {
+  border-radius: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 20%;
+}
