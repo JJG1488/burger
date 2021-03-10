@@ -1,10 +1,5 @@
-// * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
-
-// * `selectAll()`
-// * `insertOne()`
-// * `updateOne()`
-
-const connection = require('./connections');
+// Import MySQL connection.
+const connection = require('./connection.js');
 
 // Helper function for SQL syntax to add question marks (?, ?, ?) in query
 const printQuestionMarks = (num) => {
@@ -22,12 +17,11 @@ const objToSql = (ob) => {
     const arr = [];
 
     // Loop through the keys and push the key/value as a string int arr
-
     for (const key in ob) {
         let value = ob[key];
         // Check to skip hidden properties
         if (Object.hasOwnProperty.call(ob, key)) {
-            // If string with spaces, add quotations
+            // If string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
             if (typeof value === 'string' && value.indexOf(' ') >= 0) {
                 value = `'${value}'`;
             }
@@ -43,7 +37,6 @@ const objToSql = (ob) => {
 
 // Object for all our SQL statement functions.
 const orm = {
-    // select all method
     all(tableInput, cb) {
         const queryString = `SELECT * FROM ${tableInput};`;
         connection.query(queryString, (err, result) => {
@@ -53,7 +46,6 @@ const orm = {
             cb(result);
         });
     },
-    // insert method
     create(table, cols, vals, cb) {
         let queryString = `INSERT INTO ${table}`;
 
@@ -74,7 +66,7 @@ const orm = {
             cb(result);
         });
     },
-    // update method
+    // An example of objColVals would be {name: panther, sleepy: true}
     update(table, objColVals, condition, cb) {
         let queryString = `UPDATE ${table}`;
 
@@ -92,7 +84,6 @@ const orm = {
             cb(result);
         });
     },
-    // delete method
     delete(table, condition, cb) {
         let queryString = `DELETE FROM ${table}`;
         queryString += ' WHERE ';
@@ -108,5 +99,5 @@ const orm = {
     },
 };
 
-// Export the orm object 
+// Export the orm object for the model (cat.js).
 module.exports = orm;
